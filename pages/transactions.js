@@ -38,13 +38,21 @@ export default function Transactions() {
 
   if (loading) return <LoadingSpinner/>;
 
-  if (!transactions.length) return <p>No transactions found</p>;
+  if (!transactions.length){
+    return (
+      <Layout>
+        <p className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">No Identity Data Found</p>
+      </Layout>
+    );
+  }
+
 
   return (
     <RequireAuthentication>
       <Layout>
         <div className='card'>
           <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900 py-3">Transactions</h1>
+          <p className='text-center text-primary mb-2'>Note: All Amounts are returned in Kobo</p>
           <table className="min-w-full table-auto text-center">
             <thead className="justify-between">
               <tr className="bg-primary">

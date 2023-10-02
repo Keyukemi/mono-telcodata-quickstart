@@ -49,7 +49,7 @@ function Login() {
 
   return (
     <Layout>
-      <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <form onSubmit={loginUser} className="max-w-md w-full space-y-4 card">
           <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900 py-3">Login</h1>
           <div className='flex flex-col items-center justify-center'>

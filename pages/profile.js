@@ -23,10 +23,15 @@ export default function Profile() {
     
     const fetchIdentity = async () => {
       const accountId = session?.user?.accountId;
+      console.log('111')
+      console.log(accountId)
       try {
         const response = await axios.post('/api/getidentitydata', { accountId });
+        console.log('222')
+        console.log(response.data);
         setIdentity(response.data);
       } catch (error) {
+        console.log('333');
         return toast.error(getError(error))
       }finally{
         setLoading(false);
