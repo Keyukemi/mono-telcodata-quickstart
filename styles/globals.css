@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @apply mx-auto overflow-x-hidden
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.card{
+    @apply  rounded-lg shadow-md p-4 m-4;
+}
+
+.primary-button{
+    @apply bg-tertiary hover:bg-secondary active:bg-highlight text-black font-semibold px-4 py-2 rounded-full mt-2;
+}
+.secondary-button{
+    @apply bg-headline hover:bg-primary active:bg-paragraph text-black font-semibold px-4 py-2 rounded-lg mt-2;
+} 
+
+
+input,
+select,
+textarea{
+    @apply rounded border p-2 outline-none ring-tertiary focus:ring-secondary;
+}
+
+.dropdown-link{
+    @apply flex p-2 hover:bg-headline
+}
+
+.alert-error{
+    @apply my-3 inline-block max-w-max p-2 rounded-full text-right ml-auto bg-red-100 text-red-700;
+}
+
+.alert-success{
+    @apply my-3 inline-block max-w-max p-2 rounded-full text-right ml-auto bg-green-100 text-green-700;
+}
+
+.read-form{
+    @apply appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-primary rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm
+}
