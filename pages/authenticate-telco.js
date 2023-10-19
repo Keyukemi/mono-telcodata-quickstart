@@ -37,7 +37,6 @@ export default function AuthenticateTelco() {
     try {
       const response = await axios.post('/api/verifyotp', { otp, sessionId, username });
       if (response.data && response.data.id) {
-        console.log(response.data, response.data.id);
         await signOut({ redirect: false }); 
         router.push('/login');
       } else {
